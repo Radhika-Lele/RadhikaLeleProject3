@@ -1,15 +1,26 @@
+import './App.css';
+
 function Recipe( {title, calories, image, ingredients} ){
     return(
-        <div>
-            <h1>{title}</h1>
+        <div className="recipeList">
+            <h2>{title}</h2>
             <ol>
-                {ingredients.map( (ingredient) =>(
-                    <li>{ingredient.text}</li>
-                ))}
+                {ingredients.map( (ingredient) =>{
+                    // console.log(ingredient);
+                  return(
+                    <li key={ crypto.randomUUID() }>
+                        {ingredient.text}
+                    </li>
+                  )   
+                })}
             </ol>
-            <p>{calories}</p>
-            <img src={image} alt="" />
+            <p> Calories = {calories.toFixed(2)}</p>
+            <img className="image" src={image} alt="" />
+            <button>Delete this Recipe</button>
         </div>
     )
 }
 export default Recipe;
+
+
+// key={ingredient.foodId}
