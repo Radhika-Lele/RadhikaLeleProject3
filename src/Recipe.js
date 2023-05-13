@@ -18,7 +18,7 @@ function Recipe( {title, calories, image, ingredients, removeFunc, mealType} ){
                   )   
                 })}
             </ol>
-            <button onClick={removeFunc}>Delete this Recipe</button>
+            <button className="deleteButton" onClick={removeFunc}>Delete this Recipe</button>
         </div>
     </main>
     )

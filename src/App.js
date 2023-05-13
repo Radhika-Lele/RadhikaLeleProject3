@@ -62,7 +62,7 @@ function App() {
     <div className="App">
       <Header />
       <form onSubmit={getSearch} className="searchForm">
-        <input className="searchBar" type="text" value={search} onChange={updateSearch}></input>
+        <input className="searchBar" placeholder="Enter a Recipe name to search" type="text" value={search} onChange={updateSearch}></input>
         <button className="searchButton" type="submit">Search</button>
       </form>
       <div className="recipes">
