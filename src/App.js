@@ -25,7 +25,7 @@ function App() {
         const dataWithUUID = apiResults.map( (item) => {
           return {...item, id:crypto.randomUUID()}
         })
-        console.log(dataWithUUID);
+        // console.log(dataWithUUID);
         setRecipes(dataWithUUID);
       })
     // getRecipes();
@@ -46,6 +46,17 @@ function App() {
     setQuery(search);
     setSearch('');
   }
+  
+  const removeRecipe = (chosenRecipe) =>{
+    // console.log(chosenRecipe);
+     const copyOfWords = [...recipes];
+    //  console.log(copyOfWords);
+    const filteredRecipes = copyOfWords.filter( (wordObject) =>{
+          return wordObject.recipe !== chosenRecipe;
+    })
+    setRecipes(filteredRecipes);
+  }
+
 
   return (
     <div className="App">
@@ -63,6 +74,8 @@ function App() {
               calories={recipe.recipe.calories}
               image={recipe.recipe.image}
               ingredients={recipe.recipe.ingredients}
+              mealType={recipe.recipe.mealType}
+              removeFunc={ () => removeRecipe(recipe.recipe) }      
             />
           )
         })}

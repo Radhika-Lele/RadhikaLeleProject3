@@ -1,9 +1,13 @@
 import './App.css';
 
-function Recipe( {title, calories, image, ingredients} ){
+function Recipe( {title, calories, image, ingredients, removeFunc, mealType} ){
     return(
+    <main>
         <div className="recipeList">
             <h2>{title}</h2>
+            <h4> Calories = {calories.toFixed(2)}</h4>
+            <h4>Meal Type = {mealType}</h4>
+            <img className="image" src={image} alt="" />
             <ol>
                 {ingredients.map( (ingredient) =>{
                     // console.log(ingredient);
@@ -14,10 +18,9 @@ function Recipe( {title, calories, image, ingredients} ){
                   )   
                 })}
             </ol>
-            <p> Calories = {calories.toFixed(2)}</p>
-            <img className="image" src={image} alt="" />
-            <button>Delete this Recipe</button>
+            <button onClick={removeFunc}>Delete this Recipe</button>
         </div>
+    </main>
     )
 }
 export default Recipe;
