@@ -12,8 +12,12 @@
 
 .searchBar{
   width: 50%;
-  border: none;
+  border: 3px solid lightcoral;
   padding: 10px;
+}
+
+.searchBar:hover{
+  cursor: pointer;
 }
 
 .searchButton{
@@ -22,6 +26,11 @@
   padding: 10px 20px;
   color:white;
   margin-left: 23px;
+}
+
+.searchButton:hover{
+  cursor: pointer;
+  color: black;
 }
 
 .recipes{
@@ -56,8 +65,8 @@
 
 .image{
   border-radius: 10px;
-  width: 100px;
-  height: 80px;
+  width: 141px;
+  height: 125px;
 }
 
 .recipeList h2{
@@ -70,8 +79,6 @@
 
 .header{
   height: 40vh;
-   /* background: url('./Screenshot\ 2023-05-11\ 093008.png') ; */
-   /* background :lightcoral; */
    background: url('./brooke-lark-08bOYnH_r_E-unsplash\(1\).jpg');
    background-repeat: no-repeat;
    background-position: center;
@@ -82,16 +89,44 @@
 .header h1{
   margin-top: 0;
   text-align: center;
-  font-size: 50px;
+  font-size: 75px;
+  padding-top: 156px;
 }
 
 footer{
   text-align: center;
   align-items: center;
-  height:50px;
-  background: grey;
-  text-decoration: none;
+  height:60px;
+  background: lightcoral;
 }
+
+footer a{
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.footerTag{
+  padding-top: 23px;
+}
+
+.deleteButton{
+  background: lightcoral;
+  border: none;
+  padding: 10px 20px;
+  color:white;
+}
+
+.deleteButton:hover{
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
 
 /* Media queries */
 @media(max-width:650px){
