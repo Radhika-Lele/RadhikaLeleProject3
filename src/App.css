@@ -139,6 +139,12 @@ footer a{
   transition: 0.5s;
 }
 
+.errorMessage{
+  font-size: 18px;
+font-weight: bold;
+margin-left: 10px;
+}
+
 
 /* Media queries */
 @media(max-width:650px){

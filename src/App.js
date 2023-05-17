@@ -11,6 +11,7 @@ function App() {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState('chicken');
+   const [ error, setError] = useState(false);
 
 
   useEffect(() => {
@@ -19,6 +20,11 @@ function App() {
       .then((response) => {
         return response.json();
       }).then((data) => {
+        if(data.count === 0){
+          setError(true);
+        }else{
+          setError(false);
+        }
         //setRecipes(data.hits)
         //console.log(data.hits);
         const apiResults = data.hits;
@@ -27,15 +33,10 @@ function App() {
         })
         // console.log(dataWithUUID);
         setRecipes(dataWithUUID);
-      })
-    // getRecipes();
+      }).catch( error => {
+        setError(true);
+      }) 
   }, [query]);
-
-  //  const getRecipes = async ()=>{
-  //     const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${appId}&app_key=${appKey}`);
-  //     const data = await response.json();
-  //     console.log(data);
-  //  }
 
   const updateSearch = function (e) {
     setSearch(e.target.value);
@@ -64,6 +65,9 @@ function App() {
       <form onSubmit={getSearch} className="searchForm">
         <input className="searchBar" placeholder="Enter a Recipe name" type="text" value={search} onChange={updateSearch}></input>
         <button className="searchButton" type="submit">Search</button>
+        <br />
+        <br />
+        { error ? <p className="errorMessage">Sorry, Please try again to search</p> : null}
       </form>
       <div className="recipes">
         {recipes.map((recipe) => {
