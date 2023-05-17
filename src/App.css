@@ -1,38 +1,165 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.searchForm{
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar{
+  width: 50%;
+  border: 3px solid lightcoral;
+  padding: 10px;
+}
+
+.searchBar:hover{
+  cursor: pointer;
+}
+
+.searchButton{
+  background: lightcoral;
+  border: none;
+  padding: 10px 20px;
+  color:white;
+  margin-left: 23px;
+}
+
+.searchButton:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.recipes{
+  display: flex;
+  justify-content: space-around;
+   flex-wrap: wrap; 
+}
+
+.recipeList{
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgb(71,71,71);
+  margin: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  background: white;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* flex-wrap:wrap ; */
+  width: 550px;
+  height: 460px;
+  padding: 10px;
+}
+
+.recipeList ol{
+  overflow-y: scroll;
+}
+
+/* .recipeList ol li{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+.image{
+  border-radius: 10px;
+  width: 141px;
+  height: 125px;
+  padding-top: 17px;
+  padding-bottom: 13px;
+}
+
+.recipeList h2{
+   margin-bottom: 25px;
+}
+
+.recipeList h4{
+  margin: 5px;
+}
+
+.header{
+  height: 40vh;
+   background: url('./brooke-lark-08bOYnH_r_E-unsplash\(1\).jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   object-fit: cover;
+}
+
+.header h1{
+  margin-top: 0;
+  text-align: center;
+  font-size: 75px;
+  padding-top: 156px;
+}
+
+footer{
+  text-align: center;
+  align-items: center;
+  height:60px;
+  background: lightcoral;
+}
+
+footer a{
+  text-decoration: none;
+  align-items: center;
+  text-align: center;
   color: white;
+  font-size: larger;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.footerTag{
+  padding-top: 23px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.deleteButton{
+  background: lightcoral;
+  border: none;
+  padding: 10px 20px;
+  color:white;
+}
+
+.deleteButton:hover{
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.errorMessage{
+  font-size: 18px;
+font-weight: bold;
+margin-left: 10px;
+}
+
+
+/* Media queries */
+@media(max-width:650px){
+  .recipeList{
+    width: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header h1{
+    font-size: 53px;
+    width: 100%;
   }
+}
+
+@media(max-width:390px){
+  .header h1{
+    font-size: 50px;
+    }
 }
