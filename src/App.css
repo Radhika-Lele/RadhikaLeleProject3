@@ -70,11 +70,6 @@ html { box-sizing: border-box;}
   overflow-y: scroll;
 }
 
-/* .recipeList ol li{
-  display: flex;
-  flex-wrap: wrap;
-} */
-
 .image{
   border-radius: 10px;
   width: 141px;
