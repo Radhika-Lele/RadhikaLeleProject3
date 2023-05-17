@@ -41,6 +41,8 @@ html { box-sizing: border-box;}
 .searchButton:hover{
   cursor: pointer;
   color: black;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
 .recipes{
@@ -67,11 +69,6 @@ html { box-sizing: border-box;}
 .recipeList ol{
   overflow-y: scroll;
 }
-
-/* .recipeList ol li{
-  display: flex;
-  flex-wrap: wrap;
-} */
 
 .image{
   border-radius: 10px;
@@ -140,9 +137,18 @@ footer a{
 }
 
 .errorMessage{
-  font-size: 18px;
-font-weight: bold;
-margin-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 35%;
+  text-align: center;
+  color: white;
+  background: lightcoral;
+  display: inline-block;
+  align-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 15px;
+  margin-bottom: 20%;
 }
 
 
