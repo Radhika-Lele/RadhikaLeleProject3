@@ -107,6 +107,7 @@ footer{
   align-items: center;
   height:60px;
   background: lightcoral;
+   
 }
 
 footer a{
@@ -144,15 +145,32 @@ footer a{
   color: white;
   background: lightcoral;
   display: inline-block;
-  align-content: center;
-  align-items: center;
+  /* align-content: center;
+  align-items: center; */
   padding: 12px;
   border-radius: 15px;
-  margin-bottom: 20%;
+   margin-bottom: 20%;
 }
 
 
 /* Media queries */
+
+/* @media(max-width:1600px){
+  footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+} */
+
+@media(max-width:950px){
+  .errorMessage{
+    font-size: 18px;
+  }
+
+}
+
 @media(max-width:650px){
   .recipeList{
     width: auto;
@@ -162,6 +180,12 @@ footer a{
     font-size: 53px;
     width: 100%;
   }
+  
+  .errorTag{
+    width: 100%;
+    margin-left: -94px;
+  }
+
 }
 
 @media(max-width:390px){
