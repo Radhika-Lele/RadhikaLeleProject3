@@ -66,8 +66,8 @@ function App() {
         <input className="searchBar" placeholder="Enter a Recipe name 🍜" type="text" value={search} onChange={updateSearch}></input>
         <button className="searchButton" type="submit">Search 🔍</button>  
       </form>
-        <div>
-        { error ? <p className="errorMessage">Sorry 😔, Please try again to search 🙏</p> : null}
+        <div className="errorTag">
+        { error ? <p className="errorMessage">Sorry 😔, No results found</p> : null}
         </div>
       <div className="recipes">
         {recipes.map((recipe) => {
